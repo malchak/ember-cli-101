@@ -1,0 +1,25 @@
+<table class="primary">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Notes</th>
+      <th>Borrowed since</th>
+      <th>Created At</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each itemController='articles/item'}}
+      <tr>
+        <td>{{model.description}}</td>
+        <td>{{model.notes}}</td>
+        <td>{{model.createdAt}}</td>
+        <td>{{view "select" content=states selection=model.state}}</td>
+        <td>
+          {{#if model.isSaving}}
+            <span>Saving ...</span>
+          {{/if}}
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
