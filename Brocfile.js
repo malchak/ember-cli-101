@@ -35,6 +35,19 @@ app.import('vendor/fontello/font/fontello.woff', {
 });
 
 app.import('bower_components/picnic/releases/v2.min.css');
+app.import('bower_components/moment/moment.js');
 
+// Example of how to import named amd libraries
+// app.import('bower_components/ic-ajax/dist/named-amd/main.js', {
+//   exports: {
+//     'ic-ajax': [
+//       'default',
+//       'defineFixture',
+//       'lookupFixture',
+//       'raw',
+//       'request'
+//     ]
+//   }
+// });
 
 module.exports = app.toTree();
