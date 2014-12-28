@@ -1,12 +1,20 @@
-<div>
-  <p>First Name: {{model.firstName}}</p>
-  <p>Last Name: {{model.lastName}}</p>
-  <p>Email: {{model.email}}</p>
-  <p>twitter: {{model.twitter}}</p>
-  <p>{{link-to "Lend article" "articles.new"}}</p>
-  <p>{{link-to "Edit info" "friends.edit" model}}</p>
-  <p><a href="#" {{action "delete" model}}>Delete</a></p>
+<div class="friend-profile row">
+  <div class="friend-info full">
+    {{fill-murray height=300 width=300}}
+    
+    <div>
+      <p>First Name: {{model.firstName}}</p>
+      <p>Last Name: {{model.lastName}}</p>
+      <p>Email: {{model.email}}</p>
+      <p>twitter: {{model.twitter}}</p>
+      <p>{{link-to "Lend article" "articles.new"}}</p>
+      <p>{{link-to "Edit info" "friends.edit" model}}</p>
+      <p><a href="#" {{action "delete" model}}>Delete</a></p>
+    </div>
+    
+  </div>
 </div>
+
 
 <div class="articles-container">
   {{outlet}}
