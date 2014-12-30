@@ -1,14 +1,14 @@
 <table class="primary">
   <thead>
-    <th>Name</th>
-    <th>Articles</th>
+    <th {{action "setSortBy" "fullName"}}>Name</th>
+    <th {{action "setSortBy" "totalArticles"}}>Articles</th>
     <th></th>
   </thead>
   <tbody>
     {{#each friend in model}}
       <tr>
         <td>
-          {{friend.id}} - {{link-to friend.fullName 'articles' friend}}
+          {{link-to friend.fullName 'articles' friend}}
         </td>
         <td>{{friend.totalArticles}}</td>
         <td><a href="#" {{action "delete" friend}}>Delete</a></td>
