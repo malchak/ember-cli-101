@@ -3,7 +3,7 @@ import Ember from 'ember';
 import changeGate from 'ember-computed-change-gate/change-gate';
 
 export default DS.Model.extend({
-  articles: DS.hasMany('article', { async: true }),
+  articles: DS.hasMany('article'),
   firstName: DS.attr('string'),
   lastName: DS.attr('string'),
   email: DS.attr('string'),
