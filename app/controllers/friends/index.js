@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.ArrayController.extend({
   queryParams: ['sortby', 'sortAscending'],
   sortAscending: true,
-  sortBy: 'fullName',
+  sortBy: 'lastName',
   sortProperties: Ember.computed('sortBy', function () {
     return [this.get('sortBy')];
   }),

@@ -1,12 +1,14 @@
 <table class="primary">
   <thead>
+    <th>ID</th>
     <th {{action "setSortBy" "fullName"}}>Name</th>
     <th {{action "setSortBy" "totalArticles"}}>Articles</th>
     <th></th>
   </thead>
   <tbody>
-    {{#each friend in model}}
+    {{#each friend in controller}}
       <tr>
+        <td>{{friend.id}}</td>
         <td>
           {{link-to friend.fullName 'articles' friend}}
         </td>
