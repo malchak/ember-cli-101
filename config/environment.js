@@ -5,6 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'borrowers',
     environment: environment,
     baseURL: '/',
+    host: 'http://api.ember-cli-101.com',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
