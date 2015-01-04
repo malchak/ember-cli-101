@@ -4,9 +4,6 @@ export default Ember.Route.extend({
   queryParams: {
     sortBy: {
       refreshModel: true
-    },
-    sortAscending: {
-      refreshModel: true
     }
   },
   model: function (params) {
